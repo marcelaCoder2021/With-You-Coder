@@ -1,0 +1,228 @@
+@charset "UTF-8";
+/*inicioEstilosTodasLasPaginas*/
+* {
+  padding: 0;
+  /*sacoLoPredeterminado*/
+  margin: 0;
+  border: 0ch;
+}
+
+/*variables*/
+/*colorBase*/
+/*fondoCards*/
+/*fuente*/
+/*fuenteH1*/
+/*fuenteH1*/
+/*fuenteMobile*/
+.seccionHome .introduccion h2 {
+  padding: 5px 16px 0;
+  /*extend*/
+  font-family: "pacifico";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 44px;
+  text-align: center;
+  color: #A44A3F;
+}
+
+.encabezado {
+  /*header*/
+  height: 4rem;
+  width: 100%;
+  background-color: #FFD687;
+  /*fondoHeader*/
+  display: flex;
+  justify-content: space-between;
+  position: -webkit-sticky;
+  position: sticky;
+  /*encabezadoFijo*/
+  top: 0;
+  z-index: 1030;
+  padding-right: 3rem;
+  padding-left: 3rem;
+  /*terminaMenuNavegacion*/
+}
+.encabezado .logo {
+  padding: 5px;
+  margin-left: 5vw;
+}
+.encabezado .bg-light {
+  /*menuDeNavegacion*/
+  background-color: #FFD687 !important;
+}
+.encabezado .navbar-light .navbar-toggler {
+  color: #1A7564;
+  /*usoVariables*/
+  border-color: #1A7564;
+}
+.encabezado .navbar-light .navbar-nav .nav-link.active, .encabezado .navbar-light .navbar-light .navbar-nav .show > .nav-link {
+  color: #1A7564;
+  font-size: 16px;
+}
+.encabezado ul {
+  list-style: none;
+  /*sacaViñetaLista*/
+  display: flex;
+  justify-content: space-around;
+}
+.encabezado .container, .encabezado .container-fluid, .encabezado .container-lg, .encabezado .container-md, .encabezado .container-sm, .encabezado .container-xl, .encabezado .container-xxl {
+  background-color: #FFD687;
+}
+.encabezado a {
+  text-decoration: none;
+  /*sacaSubrayadoTodosA*/
+  display: flex;
+  justify-content: space-between;
+}
+
+/*cierraHeader*/
+.seccionHome {
+  background: #F6F4D2;
+}
+.seccionHome .introduccion h1 {
+  padding: 16px;
+  font-family: "pacifico";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 44px;
+  text-align: center;
+  color: #A44A3F;
+}
+.seccionHome .main .texto {
+  margin: 5% 10%;
+  font-family: "roboto";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.seccionHome .main .imagenPortada1 {
+  width: 288px;
+  margin: 12%;
+}
+.seccionHome .main .imagenPortada2 {
+  width: 288px;
+  margin: 0 12% 12%;
+}
+
+/*
+.utiles{
+    background: $background;
+    h2{ 
+        @extend %h2mobile;
+    }
+    .ulFlex{
+        .ulHome{
+            list-style: none;
+            padding: 1.5rem;
+            text-decoration: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            li{
+                align-self: center;
+                #1{
+                    grid-area: 1;
+                }
+                #2{
+                    grid-area: 2;
+                }
+                #3{
+                    grid-area: 3;
+                }
+                #4{
+                    grid-column: 4;
+                }
+            }  
+            grid-template-areas: "1 4"
+                                 "3 2";
+            grid-gap: 1rem;                    
+        }
+    }
+}
+
+
+@each $li in (1), (2), (3), (4) { cadaElementoDelLi
+    background: #CBDFBD;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 10%);
+    border-radius: 16px 0px 15px;
+    height: 70px;
+    width: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+}*/
+footer {
+  /*footerUnico*/
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+footer div.social-media-links {
+  background-color: #FF8F52;
+  overflow: hidden;
+  text-align: center;
+  color: #1A7564;
+  padding-top: 0.7rem;
+}
+footer div.social-media-links ul {
+  margin: 0;
+  padding: 0;
+}
+footer div.social-media-links li {
+  display: inline;
+  margin: 0;
+  padding: 0 20px;
+}
+footer div.social-media-links a {
+  border-bottom: 0px solid rgba(0, 0, 0, 0.95);
+  border-radius: 4px;
+  box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0), 0 6px 8px rgba(0, 0, 0, 0), 0 24px 24px rgba(0, 0, 0, 0), 0 36px 36px rgba(0, 0, 0, 0), 0 64px 64px rgba(0, 0, 0, 0), 0 64px 128px rgba(0, 0, 0, 0), 0 120px 0 rgba(0, 0, 0, 0), 0 86px 8px 6px rgba(0, 0, 0, 0);
+  display: initial;
+  height: 30px;
+  padding: 20px;
+  position: relative;
+  transition: 0.2s ease-in;
+  width: 30px;
+}
+footer div.social-media-links a svg {
+  left: 20px;
+  position: absolute;
+  top: 20px;
+  height: 30px;
+  width: 30px;
+}
+footer div.social-media-links a svg .glow path,
+footer div.social-media-links a svg .glow circle {
+  fill: rgba(0, 0, 0, 0);
+}
+footer div.social-media-links a svg path,
+footer div.social-media-links a svg circle {
+  fill: #1A7564;
+  transition: 0.2s ease-in;
+}
+footer div.social-media-links a:hover {
+  transform: translateY(-4px);
+  box-shadow: inset 0 -3px 0 0 #1A7564;
+}
+footer div.social-media-links a:hover svg.glow {
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><f…ter id="filter"><feGaussianBlur stdDeviation="10" /></filter></svg>#filter');
+  filter: blur(2px);
+}
+footer div.social-media-links a:hover svg.glow path,
+footer div.social-media-links a:hover svg.glow circle {
+  fill: fadeout #1A7564c7, 40;
+}
+footer div.social-media-links a:hover svg path, footer div.social-media-links a:hover circle {
+  fill: #1A7564c7;
+}
+footer div.social-media-links p.copy {
+  margin-top: 0px;
+  color: #1A7564;
+  padding-top: 1em;
+}/*# sourceMappingURL=main.css.map */
