@@ -24,6 +24,9 @@ $background:#F6F4D2;
 }
 
 
+
+
+
 .encabezado{/*header*/
     height: 4rem;
     width: 100%;
@@ -104,7 +107,16 @@ $background:#F6F4D2;
         }
     }
 }
-/*
+#area1, #area2, #area3, #area4{
+    background-color: #CBDFBD;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 10%);
+    border-radius: 16px 0px 15px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+}
 .utiles{
     background: $background;
     h2{ 
@@ -118,40 +130,34 @@ $background:#F6F4D2;
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
+            margin-bottom: 0;
             li{
+                p{
+                    padding: 3%;
+                    margin-bottom: 0;
+                }
                 align-self: center;
-                #1{
+                #area1{
                     grid-area: 1;
                 }
-                #2{
+                #area2{
                     grid-area: 2;
                 }
-                #3{
+                #area3{
                     grid-area: 3;
                 }
-                #4{
+                #area4{
                     grid-column: 4;
                 }
             }  
-            grid-template-areas: "1 4"
-                                 "3 2";
+            grid-template-areas: "area1 area4"
+                                 "area3 area2";
             grid-gap: 1rem;                    
         }
     }
 }
-*/
 
-@each $li in (1), (2), (3), (4) { //cadaElementoDelLi
-    background-color: #CBDFBD;
-    box-shadow: 0px 4px 4px rgb(0 0 0 / 10%);
-    border-radius: 16px 0px 15px;
-    height: 70px;
-    width: 230px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 0px;
-}
+
 
 
 

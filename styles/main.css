@@ -14,7 +14,7 @@
 /*fuenteH1*/
 /*fuenteH1*/
 /*fuenteMobile*/
-.seccionHome .introduccion h2 {
+.utiles h2, .seccionHome .introduccion h2 {
   padding: 5px 16px 0;
   /*extend*/
   font-family: "pacifico";
@@ -109,54 +109,51 @@
   margin: 0 12% 12%;
 }
 
-/*
-.utiles{
-    background: $background;
-    h2{ 
-        @extend %h2mobile;
-    }
-    .ulFlex{
-        .ulHome{
-            list-style: none;
-            padding: 1.5rem;
-            text-decoration: none;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            li{
-                align-self: center;
-                #1{
-                    grid-area: 1;
-                }
-                #2{
-                    grid-area: 2;
-                }
-                #3{
-                    grid-area: 3;
-                }
-                #4{
-                    grid-column: 4;
-                }
-            }  
-            grid-template-areas: "1 4"
-                                 "3 2";
-            grid-gap: 1rem;                    
-        }
-    }
+#area1, #area2, #area3, #area4 {
+  background-color: #CBDFBD;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 16px 0px 15px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
 }
 
+.utiles {
+  background: #F6F4D2;
+}
+.utiles .ulFlex .ulHome {
+  list-style: none;
+  padding: 1.5rem;
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin-bottom: 0;
+  grid-template-areas: "area1 area4" "area3 area2";
+  grid-gap: 1rem;
+}
+.utiles .ulFlex .ulHome li {
+  align-self: center;
+}
+.utiles .ulFlex .ulHome li p {
+  padding: 3%;
+  margin-bottom: 0;
+}
+.utiles .ulFlex .ulHome li #area1 {
+  grid-area: 1;
+}
+.utiles .ulFlex .ulHome li #area2 {
+  grid-area: 2;
+}
+.utiles .ulFlex .ulHome li #area3 {
+  grid-area: 3;
+}
+.utiles .ulFlex .ulHome li #area4 {
+  grid-column: 4;
+}
 
-@each $li in (1), (2), (3), (4) { cadaElementoDelLi
-    background: #CBDFBD;
-    box-shadow: 0px 4px 4px rgb(0 0 0 / 10%);
-    border-radius: 16px 0px 15px;
-    height: 70px;
-    width: 230px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 0px;
-}*/
 footer {
   /*footerUnico*/
   bottom: 0;
