@@ -100,6 +100,9 @@
   letter-spacing: 0em;
   text-align: left;
 }
+.seccionHome .main .imagenOcultable {
+  display: none;
+}
 .seccionHome .main .imagenPortada1 {
   width: 288px;
   margin: 12%;
@@ -154,6 +157,84 @@
   grid-column: 4;
 }
 
+@media only screen and (min-width: 600px) {
+  /*pantallaMediana*/
+  .seccionHome .introduccion {
+    padding: 0px;
+  }
+  .seccionHome .introduccion h1 {
+    font-size: 27px;
+  }
+  .seccionHome .introduccion h2 {
+    font-size: 25px;
+  }
+  .seccionHome .main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+  }
+  .seccionHome .main .texto {
+    margin: 5% 8%;
+    font-size: 14px;
+  }
+  .seccionHome .main .imagenOcultable {
+    display: flex;
+    position: static;
+    left: 0%;
+    right: 51.21%;
+    top: 2.59%;
+    bottom: 2.59%;
+    border: 0;
+    flex-grow: 0;
+    margin: 0px 17px;
+    width: 50%;
+  }
+  .seccionHome .main .imagenPortada1 {
+    display: none;
+  }
+  .seccionHome .main .imagenPortada2 {
+    width: 55%;
+    margin: 0;
+    padding: 25px 16px 0;
+  }
+
+  .utiles {
+    display: flex;
+  }
+  .utiles h2 {
+    align-self: center;
+    font-size: 25px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .seccionHome .introduccion h1 {
+    font-size: 31px;
+  }
+  .seccionHome .introduccion h2 {
+    font-size: 28px;
+    padding-top: 35px;
+  }
+  .seccionHome .main {
+    margin: 0 20% 0 20%;
+  }
+  .seccionHome .main .texto {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .seccionHome .main .imagenPortada2 {
+    padding-top: 0;
+  }
+
+  .utiles {
+    justify-content: center;
+  }
+  .utiles h2 {
+    font-size: 28px;
+  }
+}
+/*finMediaQuerysHome*/
 footer {
   /*footerUnico*/
   bottom: 0;

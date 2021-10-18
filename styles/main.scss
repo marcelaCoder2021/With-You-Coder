@@ -97,6 +97,9 @@ $background:#F6F4D2;
             letter-spacing: 0em;
             text-align: left;
         }
+        .imagenOcultable{
+            display: none;
+        }
         .imagenPortada1{
             width: 288px;
             margin: 12%;
@@ -156,10 +159,87 @@ $background:#F6F4D2;
         }
     }
 }
-
-
-
-
+@media only screen and (min-width:600px){ /*pantallaMediana*/
+    .seccionHome{
+        .introduccion{
+            padding: 0px;
+            h1{
+                font-size: 27px;
+            }
+            h2{
+                font-size: 25px;
+            }
+        }
+        .main{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 0px;
+            .texto{
+                margin: 5% 8%;
+                font-size: 14px;
+            }
+            
+            .imagenOcultable{
+                display:flex;
+                position: static;
+                left: 0%;
+                right: 51.21%;
+                top: 2.59%;
+                bottom: 2.59%;
+                border: 0;
+                flex-grow: 0;
+                margin: 0px 17px;
+                width: 50%;
+            }
+            .imagenPortada1{
+                display: none;
+            }
+            .imagenPortada2{
+                width: 55%;
+                margin: 0;
+                padding: 25px 16px 0;
+            }
+        }
+    }
+    .utiles{
+        display: flex;
+        h2{
+            align-self: center;
+            font-size: 25px;
+        }
+    }
+}
+@media only screen and (min-width:992px)/*pantallaGrande*/{
+    .seccionHome{
+        .introduccion{
+            h1{
+                font-size: 31px;
+            }
+            h2{
+                font-size: 28px;
+                padding-top: 35px;
+            }
+        }
+        .main{
+            margin: 0 20% 0 20%;
+            .texto{
+                font-size: 16px;
+                line-height: 20px;
+            }
+            .imagenPortada2{
+                padding-top: 0;
+            }
+        }
+    }
+    .utiles{
+        justify-content: center;
+        h2{
+            font-size: 28px;
+        }
+    }
+}/*finMediaQuerysHome*/
 
 
 
