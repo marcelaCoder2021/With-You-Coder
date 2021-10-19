@@ -38,7 +38,7 @@ $background:#F6F4D2;
 .encabezado{/*header*/
     height: 4rem;
     width: 100%;
-    background-color:#FFD687 ;/*fondoHeader*/
+    background-color:#F19C79 ;/*fondoHeader*/
     display: flex;
     justify-content: space-between;
     position:sticky;/*encabezadoFijo*/
@@ -51,7 +51,7 @@ $background:#F6F4D2;
         margin-left:5vw;
     }
     .bg-light { /*menuDeNavegacion*/
-        background-color:#FFD687 !important;
+        background-color:#F19C79 !important;
     }
     .navbar-light {
         .navbar-toggler {
@@ -69,7 +69,7 @@ $background:#F6F4D2;
         justify-content:space-around;
     }
     .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-        background-color: #FFD687;
+        background-color: #F19C79;
     }
     a {text-decoration: none; /*sacaSubrayadoTodosA*/
         display: flex;
@@ -81,7 +81,7 @@ footer { /*footerUnico*/
     left: 0;
     right: 0;
     div.social-media-links {
-        background-color: #FF8F52;
+        background-color:#CBDFBD;
         overflow: hidden;
         text-align: center;
         color: #1A7564;
@@ -439,3 +439,98 @@ footer { /*footerUnico*/
     }
 }
 /*finMediaQueryPrimerosPasos*/
+
+/*estilosDerechos*/
+.seccionDerechos{
+    background: $background;
+    .introduccion{
+        h1{
+            padding: 16px;
+            font-family: $FontH1;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 44px;
+            text-align: center;
+            color: $FontH1Color;
+        }
+        h2{ 
+            @extend %h2mobile;   
+        }
+    }
+    .textoDerechos{
+        @extend %estiloTextos;
+       
+    }
+    
+    }
+
+
+
+
+
+
+
+
+
+
+
+.row {
+    display:flex; 
+    justify-content: space-around;
+    width:100%;
+    height: auto;
+    padding-top: 1rem;
+    .col-sm-6 { 
+        .card {
+            display:flex; 
+            justify-content: space-around;
+            background: #FFFFBF;
+            border: $FontColor;
+            padding-top: 2rem !important;
+            .card-body{
+                background-color: $CardBackground;
+                border: 2px solid 
+                        $FontColor;
+                border-radius: 40px 0;        
+                height: fit-content;
+                padding: 2rem 2rem;
+                box-shadow: 0 0 20px #4f9;
+                .card-title{
+                    color:$FontColor;
+                }
+                .card-text{
+                    color:$FontColor;
+                }
+                .btn-primary { /*botonInactivo*/
+                    border-color:$FontColor;
+                    background: $FontColor;
+                    border-radius: 15px 0 ;
+                }
+                &:focus {/*botonActivo*/
+                    border-color: $FontColor;
+                    background: $FontColor;
+                    border-radius: 15px 0 ;
+                    outline-style: none;
+                    box-shadow: none;
+                }
+            }
+        }
+        .modal{/*estilosModal*/
+            background:#FFD687;
+        }
+        .show .modal-dialog {
+            transform: none;
+        }
+        .modal.fade .modal-dialog{
+            padding-top: 5vh;
+            .modal-content{
+                color: $FontColor;
+                background: $CardBackground;
+                .linkCards{
+                    pointer-events: all;/*paraLinkearDentroDelCard*/
+                }
+            }
+        } 
+    }
+}

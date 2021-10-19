@@ -6,7 +6,7 @@
 /*fuenteH1*/
 /*fuenteH1*/
 /*fuenteMobile*/
-.seccionPrimerosPasos2 .introduccion h2, .seccionPrimerosPasos .introduccion h2, .utiles h2, .seccionHome .introduccion h2 {
+.seccionDerechos .introduccion h2, .seccionPrimerosPasos2 .introduccion h2, .seccionPrimerosPasos .introduccion h2, .utiles h2, .seccionHome .introduccion h2 {
   /*extend*/
   padding: 5px 16px 0;
   font-family: "pacifico";
@@ -18,7 +18,7 @@
   color: #A44A3F;
 }
 
-.seccionPrimerosPasos2 .textoPrimerosPasos, .seccionPrimerosPasos .divPrimerosPasos .textoPrimerosPasos, .seccionHome .main .texto {
+.seccionDerechos .textoDerechos, .seccionPrimerosPasos2 .textoPrimerosPasos, .seccionPrimerosPasos .divPrimerosPasos .textoPrimerosPasos, .seccionHome .main .texto {
   /*extend*/
   margin: 5% 10%;
   font-family: "roboto";
@@ -44,7 +44,7 @@
   /*header*/
   height: 4rem;
   width: 100%;
-  background-color: #FFD687;
+  background-color: #F19C79;
   /*fondoHeader*/
   display: flex;
   justify-content: space-between;
@@ -63,7 +63,7 @@
 }
 .encabezado .bg-light {
   /*menuDeNavegacion*/
-  background-color: #FFD687 !important;
+  background-color: #F19C79 !important;
 }
 .encabezado .navbar-light .navbar-toggler {
   color: #666464;
@@ -81,7 +81,7 @@
   justify-content: space-around;
 }
 .encabezado .container, .encabezado .container-fluid, .encabezado .container-lg, .encabezado .container-md, .encabezado .container-sm, .encabezado .container-xl, .encabezado .container-xxl {
-  background-color: #FFD687;
+  background-color: #F19C79;
 }
 .encabezado a {
   text-decoration: none;
@@ -98,7 +98,7 @@ footer {
   right: 0;
 }
 footer div.social-media-links {
-  background-color: #FF8F52;
+  background-color: #CBDFBD;
   overflow: hidden;
   text-align: center;
   color: #1A7564;
@@ -408,4 +408,80 @@ footer div.social-media-links p.copy {
     padding-bottom: 12px;
   }
 }
-/*finMediaQueryPrimerosPasos*//*# sourceMappingURL=main.css.map */
+/*finMediaQueryPrimerosPasos*/
+/*estilosDerechos*/
+.seccionDerechos {
+  background: #F6F4D2;
+}
+.seccionDerechos .introduccion h1 {
+  padding: 16px;
+  font-family: "pacifico";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 44px;
+  text-align: center;
+  color: #A44A3F;
+}
+.row {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: auto;
+  padding-top: 1rem;
+}
+.row .col-sm-6 .card {
+  display: flex;
+  justify-content: space-around;
+  background: #FFFFBF;
+  border: #666464;
+  padding-top: 2rem !important;
+}
+.row .col-sm-6 .card .card-body {
+  background-color: #EBB7E6;
+  border: 2px solid #666464;
+  border-radius: 40px 0;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 2rem 2rem;
+  box-shadow: 0 0 20px #4f9;
+}
+.row .col-sm-6 .card .card-body .card-title {
+  color: #666464;
+}
+.row .col-sm-6 .card .card-body .card-text {
+  color: #666464;
+}
+.row .col-sm-6 .card .card-body .btn-primary {
+  /*botonInactivo*/
+  border-color: #666464;
+  background: #666464;
+  border-radius: 15px 0;
+}
+.row .col-sm-6 .card .card-body:focus {
+  /*botonActivo*/
+  border-color: #666464;
+  background: #666464;
+  border-radius: 15px 0;
+  outline-style: none;
+  box-shadow: none;
+}
+.row .col-sm-6 .modal {
+  /*estilosModal*/
+  background: #FFD687;
+}
+.row .col-sm-6 .show .modal-dialog {
+  transform: none;
+}
+.row .col-sm-6 .modal.fade .modal-dialog {
+  padding-top: 5vh;
+}
+.row .col-sm-6 .modal.fade .modal-dialog .modal-content {
+  color: #666464;
+  background: #EBB7E6;
+}
+.row .col-sm-6 .modal.fade .modal-dialog .modal-content .linkCards {
+  pointer-events: all;
+  /*paraLinkearDentroDelCard*/
+}/*# sourceMappingURL=main.css.map */
