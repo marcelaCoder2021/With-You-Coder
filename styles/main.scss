@@ -1,10 +1,5 @@
-/*inicioEstilosTodasLasPaginas*/
-*{padding: 0; /*sacoLoPredeterminado*/
-    margin: 0;
-    border: 0ch;
-}
 /*variables*/
-$FontColor: #1A7564;/*colorBase*/
+$FontColor: #666464;/*colorBase*/
 $CardBackground: #EBB7E6;/*fondoCards*/
 $Font-face:'Open Sans', sans-serif; /*fuente*/
 $FontH1: 'pacifico';  /*fuenteH1*/
@@ -12,8 +7,8 @@ $FontH1Color: #A44A3F; /*fuenteH1*/
 $FontTextoMobile: 'roboto'; /*fuenteMobile*/
 $FontTextoMobileSize: 12px;
 $background:#F6F4D2;
-%h2mobile { 
-    padding: 5px 16px 0; /*extend*/
+%h2mobile { /*extend*/
+    padding: 5px 16px 0; 
     font-family: $FontH1;
     font-size: 22px;
     font-style: normal;
@@ -22,11 +17,24 @@ $background:#F6F4D2;
     text-align: center;
     color: $FontH1Color;
 }
+%estiloTextos{ /*extend*/
+    margin: 5% 10%;
+    font-family: $FontTextoMobile;
+    font-size: $FontTextoMobileSize;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $FontColor;
+}
+/*finVariables*/
 
-
-
-
-
+/*inicioEstilosTodasLasPaginas*/
+*{padding: 0; /*sacoLoPredeterminado*/
+    margin: 0;
+    border: 0ch;
+}
 .encabezado{/*header*/
     height: 4rem;
     width: 100%;
@@ -68,7 +76,85 @@ $background:#F6F4D2;
         justify-content: space-between;
     } /*terminaMenuNavegacion*/  
 }/*cierraHeader*/
+footer { /*footerUnico*/
+    bottom: 0;
+    left: 0;
+    right: 0;
+    div.social-media-links {
+        background-color: #FF8F52;
+        overflow: hidden;
+        text-align: center;
+        color: #1A7564;
+        padding-top: 0.7rem;
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            display: inline;
+            margin: 0;
+            padding: 0 20px; 
+        }
+        a{
+            border-bottom: 0px solid rgba(0,0,0,0.95) ;
+            border-radius: 4px;
+            box-shadow: inset 0 -3px 0 0 rgba(0,0,0,0), 0 6px 8px rgba(0, 0, 0, 0), 0 24px 24px rgba(0, 0, 0, 0),
+            0 36px 36px rgba(0, 0, 0, 0), 0 64px 64px rgba(0, 0, 0, 0), 0 64px 128px rgba(0, 0, 0, 0),
+            0 120px 0 rgba(0, 0, 0, 0), 0 86px 8px 6px rgba(0, 0, 0, 0);
+            display: initial;
+            height: 30px;
+            padding: 20px;
+            position: relative;
+            -webkit-transition: 0.2s ease-in;
+            transition: 0.2s ease-in;
+            width: 30px; 
+            svg {
+                left: 20px;
+                position: absolute;
+                top: 20px;
+                height: 30px;
+                width: 30px;
+                .glow path,
+                .glow circle{
+                    fill: rgba(0, 0, 0, 0);
+                }
+                path,
+                circle {
+                    fill: #1A7564;
+                    -webkit-transition: 0.2s ease-in;
+                    transition: 0.2s ease-in;
+                }
+            }
+        }
+        a:hover {
+            -webkit-transform: translateY(-4px);
+            transform: translateY(-4px); 
+            box-shadow: inset 0 -3px 0 0 #1A7564;
+            svg.glow{
+                filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><f…ter id="filter"><feGaussianBlur stdDeviation="10" /></filter></svg>#filter');
+                -webkit-filter: blur(2px);
+                filter: blur(2px);
+                path, 
+                circle{
+                    fill: fadeout ( #1A7564c7, 40)
+                }
+            }
+            svg path,
+            & circle {
+                fill:#1A7564c7;
+            }
+        }
+        p.copy {
+            margin-top: 0px;
+            color: $FontColor;
+            padding-top: 1em;
+            
+        }
+    }
+}
+/*finEstilosTodasLasPaginas*/
 
+/*estilosHome*/
 .seccionHome{
     background: $background;
     .introduccion{
@@ -88,14 +174,7 @@ $background:#F6F4D2;
     }
     .main{
         .texto{
-            margin: 5% 10%;
-            font-family: $FontTextoMobile;
-            font-size: $FontTextoMobileSize;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 18px;
-            letter-spacing: 0em;
-            text-align: left;
+            @extend %estiloTextos;
         }
         .imagenOcultable{
             display: none;
@@ -159,6 +238,7 @@ $background:#F6F4D2;
         }
     }
 }
+/*mediaQueryHome*/
 @media only screen and (min-width:600px){ /*pantallaMediana*/
     .seccionHome{
         .introduccion{
@@ -240,85 +320,122 @@ $background:#F6F4D2;
         }
     }
 }/*finMediaQuerysHome*/
-
-
-
-
-
-
-footer { /*footerUnico*/
-    bottom: 0;
-    left: 0;
-    right: 0;
-    div.social-media-links {
-        background-color: #FF8F52;
-        overflow: hidden;
-        text-align: center;
-        color: #1A7564;
-        padding-top: 0.7rem;
-        ul {
-            margin: 0;
-            padding: 0;
+/*finEstilosHome*/
+.seccionPrimerosPasos{
+    background: $background;
+    .introduccion{
+        h1{padding-top: 16px;
+            font-family: $FontH1;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 44px;
+            text-align: center;
+            color: $FontH1Color;
         }
-        li{
-            display: inline;
-            margin: 0;
-            padding: 0 20px; 
+        h2{
+            @extend %h2mobile;
+            padding-top:0;
         }
-        a{
-            border-bottom: 0px solid rgba(0,0,0,0.95) ;
-            border-radius: 4px;
-            box-shadow: inset 0 -3px 0 0 rgba(0,0,0,0), 0 6px 8px rgba(0, 0, 0, 0), 0 24px 24px rgba(0, 0, 0, 0),
-            0 36px 36px rgba(0, 0, 0, 0), 0 64px 64px rgba(0, 0, 0, 0), 0 64px 128px rgba(0, 0, 0, 0),
-            0 120px 0 rgba(0, 0, 0, 0), 0 86px 8px 6px rgba(0, 0, 0, 0);
-            display: initial;
-            height: 30px;
-            padding: 20px;
-            position: relative;
-            -webkit-transition: 0.2s ease-in;
-            transition: 0.2s ease-in;
-            width: 30px; 
-            svg {
-                left: 20px;
-                position: absolute;
-                top: 20px;
-                height: 30px;
-                width: 30px;
-                .glow path,
-                .glow circle{
-                    fill: rgba(0, 0, 0, 0);
-                }
-                path,
-                circle {
-                    fill: #1A7564;
-                    -webkit-transition: 0.2s ease-in;
-                    transition: 0.2s ease-in;
-                }
+    }
+    .divPrimerosPasos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 10%;
+        .textoPrimerosPasos{
+        @extend %estiloTextos;
+        margin:0;
+        margin-bottom: 1rem;
+        }
+    }
+    .imagenPrimerosPasos{
+        display: flex;
+        width: 55%;
+        padding-bottom: 15px;
+    }   
+}
+.seccionPrimerosPasos2{
+    background: $background;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px  10%;
+    .introduccion{
+        h2{
+            @extend %h2mobile;
+        }
+    }
+    .textoPrimerosPasos{
+        @extend %estiloTextos;
+        margin:0;
+        p {
+            margin:0;
+            .consulado{
+                color: $FontColor;
+                text-decoration: none;
+                font-weight: bold;
             }
-        }
-        a:hover {
-            -webkit-transform: translateY(-4px);
-            transform: translateY(-4px); 
-            box-shadow: inset 0 -3px 0 0 #1A7564;
-            svg.glow{
-                filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><f…ter id="filter"><feGaussianBlur stdDeviation="10" /></filter></svg>#filter');
-                -webkit-filter: blur(2px);
-                filter: blur(2px);
-                path, 
-                circle{
-                    fill: fadeout ( #1A7564c7, 40)
-                }
-            }
-            svg path,
-            & circle {
-                fill:#1A7564c7;
-            }
-        }
-        p.copy {
-            margin-top: 0px;
-            color: $FontColor;
-            padding-top: 1em;
-            
         }
     }
 }
+/*mediaQueryPrimerosPasos*/ 
+@media only screen and (min-width:600px){ /*pantallaMediana*/
+    .seccionPrimerosPasos{
+        .introduccion{
+            h1{
+                font-size: 27px;
+            }
+            h2{
+                font-size: 25px;
+            }
+        }       
+        .divPrimerosPasos{ 
+            .textoPrimerosPasos{
+                font-size: 14px;
+            }
+        }
+    }
+    .seccionPrimerosPasos2{
+        .introduccion{
+            h2{
+                font-size: 25px;
+            }
+        }
+        .textoPrimerosPasos{
+                font-size:14px;
+            }
+    }
+}
+@media only screen and (min-width:992px)/*pantallaGrande*/{
+    .seccionPrimerosPasos, .seccionPrimerosPasos2{
+        .introduccion{
+            h1{
+                font-size: 36px;
+            }
+            h2{
+                font-size: 27px;
+            }
+        }
+        .divPrimerosPasos{ 
+            .textoPrimerosPasos{
+           font-size: 16px;
+            li{
+                padding: 10px;
+                }
+            }
+        }
+    }
+    .seccionPrimerosPasos2{
+        .center{
+            padding:10px;
+            .textoPrimerosPasos{
+                font-size: 16px;
+                li{
+                    padding-bottom: 12px;
+                }
+            }
+        }
+    }
+}
+/*finMediaQueryPrimerosPasos*/
