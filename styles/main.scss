@@ -1,6 +1,6 @@
 /*variables*/
 $FontColor: #666464;/*colorBase*/
-$CardBackground: #EBB7E6;/*fondoCards*/
+$CardBackground:#CBDFBD;;/*fondoCards*/
 $Font-face:'Open Sans', sans-serif; /*fuente*/
 $FontH1: 'pacifico';  /*fuenteH1*/
 $FontH1Color: #A44A3F; /*fuenteH1*/
@@ -303,7 +303,7 @@ footer { /*footerUnico*/
             }
         }
         .main{
-            margin: 0 20% 0 20%;
+            margin: 0 15% 0 15%;
             .texto{
                 font-size: 16px;
                 line-height: 20px;
@@ -314,6 +314,7 @@ footer { /*footerUnico*/
         }
     }
     .utiles{
+        padding: 0 15% 1%;
         justify-content: center;
         h2{
             font-size: 28px;
@@ -427,8 +428,8 @@ footer { /*footerUnico*/
         }
     }
     .seccionPrimerosPasos2{
+        padding:10px 10%;
         .center{
-            padding:10px;
             .textoPrimerosPasos{
                 font-size: 16px;
                 li{
@@ -439,10 +440,12 @@ footer { /*footerUnico*/
     }
 }
 /*finMediaQueryPrimerosPasos*/
+/*finEstilosPrimerosPasos*/
 
 /*estilosDerechos*/
 .seccionDerechos{
     background: $background;
+    padding: 0 10%;
     .introduccion{
         h1{
             padding: 16px;
@@ -460,47 +463,40 @@ footer { /*footerUnico*/
     }
     .textoDerechos{
         @extend %estiloTextos;
-       
+        margin: 0;
+        padding-bottom: 2rem;   
     }
-    
-    }
-
-
-
-
-
-
-
-
-
-
-
+}
 .row {
     display:flex; 
     justify-content: space-around;
     width:100%;
-    height: auto;
-    padding-top: 1rem;
+    margin: 0;
     .col-sm-6 { 
+        width: 150px;
+        padding-left: 0;
         .card {
             display:flex; 
             justify-content: space-around;
-            background: #FFFFBF;
+            background: $background;
             border: $FontColor;
             padding-top: 2rem !important;
+            height: 100%;
             .card-body{
                 background-color: $CardBackground;
-                border: 2px solid 
-                        $FontColor;
+                border: 2px solid;
+                color: $FontColor;
                 border-radius: 40px 0;        
                 height: fit-content;
-                padding: 2rem 2rem;
-                box-shadow: 0 0 20px #4f9;
+                width: 150px;
+                padding: 5px 1rem;
                 .card-title{
                     color:$FontColor;
+                    font-size: 16px;
                 }
                 .card-text{
                     color:$FontColor;
+                    font-size: 12px;
                 }
                 .btn-primary { /*botonInactivo*/
                     border-color:$FontColor;
@@ -516,14 +512,14 @@ footer { /*footerUnico*/
                 }
             }
         }
-        .modal{/*estilosModal*/
-            background:#FFD687;
+    .modal{/*estilosModal*/
+        background:#FFD687;
         }
-        .show .modal-dialog {
-            transform: none;
+    .show .modal-dialog {
+        transform: none;
         }
-        .modal.fade .modal-dialog{
-            padding-top: 5vh;
+    .modal.fade .modal-dialog{
+        padding-top: 5vh;
             .modal-content{
                 color: $FontColor;
                 background: $CardBackground;
@@ -534,3 +530,79 @@ footer { /*footerUnico*/
         } 
     }
 }
+/*mediaQueryDerechos*/
+@media only screen and (min-width:600px){ /*pantallaMediana*/
+    .seccionDerechos{
+        .introduccion{
+            h1{
+                font-size: 27px;
+            }
+            h2{
+                font-size: 25px;
+            }    
+        }
+        .textoDerechos{
+            font-size: 14px;
+        }
+    }
+    .row{
+        .col-sm-6{
+            .card{
+                .card-body{
+                    .card-title{
+                        font-size: 18px;
+                    }
+                    .card-text{
+                        font-size: 14px;
+                    }
+                } 
+            }   
+        } 
+    }
+}
+@media only screen and (min-width:992px)/*pantallaGrande*/{
+    .seccionDerechos{
+        .introduccion{
+            h1{
+                font-size: 31px;
+            }
+            h2{
+                font-size: 27px;
+            }    
+        }
+        .textoDerechos{
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+    .row{
+        .col-sm-6{
+            width: 250px;
+            .card{
+                .card-body{
+                    width: 250px;
+                    .card-title{
+                        font-size: 18px;  
+                    }
+                    .card-text{
+                        font-size: 14px;
+                    }
+                } 
+            }   
+        } 
+    }
+.center{
+    .textoDerechos{
+        padding-left: 16rem;
+    }
+}
+
+
+
+
+
+
+
+}
+/*finMediaQueryDerechos*/
+/*finEstilosDerechos*/

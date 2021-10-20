@@ -294,7 +294,7 @@ footer div.social-media-links p.copy {
     padding-top: 35px;
   }
   .seccionHome .main {
-    margin: 0 20% 0 20%;
+    margin: 0 15% 0 15%;
   }
   .seccionHome .main .texto {
     font-size: 16px;
@@ -305,6 +305,7 @@ footer div.social-media-links p.copy {
   }
 
   .utiles {
+    padding: 0 15% 1%;
     justify-content: center;
   }
   .utiles h2 {
@@ -398,8 +399,8 @@ footer div.social-media-links p.copy {
     padding: 10px;
   }
 
-  .seccionPrimerosPasos2 .center {
-    padding: 10px;
+  .seccionPrimerosPasos2 {
+    padding: 10px 10%;
   }
   .seccionPrimerosPasos2 .center .textoPrimerosPasos {
     font-size: 16px;
@@ -409,9 +410,11 @@ footer div.social-media-links p.copy {
   }
 }
 /*finMediaQueryPrimerosPasos*/
+/*finEstilosPrimerosPasos*/
 /*estilosDerechos*/
 .seccionDerechos {
   background: #F6F4D2;
+  padding: 0 10%;
 }
 .seccionDerechos .introduccion h1 {
   padding: 16px;
@@ -423,35 +426,47 @@ footer div.social-media-links p.copy {
   text-align: center;
   color: #A44A3F;
 }
+.seccionDerechos .textoDerechos {
+  margin: 0;
+  padding-bottom: 2rem;
+}
+
 .row {
   display: flex;
   justify-content: space-around;
   width: 100%;
-  height: auto;
-  padding-top: 1rem;
+  margin: 0;
+}
+.row .col-sm-6 {
+  width: 150px;
+  padding-left: 0;
 }
 .row .col-sm-6 .card {
   display: flex;
   justify-content: space-around;
-  background: #FFFFBF;
+  background: #F6F4D2;
   border: #666464;
   padding-top: 2rem !important;
+  height: 100%;
 }
 .row .col-sm-6 .card .card-body {
-  background-color: #EBB7E6;
-  border: 2px solid #666464;
+  background-color: #CBDFBD;
+  border: 2px solid;
+  color: #666464;
   border-radius: 40px 0;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  padding: 2rem 2rem;
-  box-shadow: 0 0 20px #4f9;
+  width: 150px;
+  padding: 5px 1rem;
 }
 .row .col-sm-6 .card .card-body .card-title {
   color: #666464;
+  font-size: 16px;
 }
 .row .col-sm-6 .card .card-body .card-text {
   color: #666464;
+  font-size: 12px;
 }
 .row .col-sm-6 .card .card-body .btn-primary {
   /*botonInactivo*/
@@ -479,9 +494,61 @@ footer div.social-media-links p.copy {
 }
 .row .col-sm-6 .modal.fade .modal-dialog .modal-content {
   color: #666464;
-  background: #EBB7E6;
+  background: #CBDFBD;
 }
 .row .col-sm-6 .modal.fade .modal-dialog .modal-content .linkCards {
   pointer-events: all;
   /*paraLinkearDentroDelCard*/
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*mediaQueryDerechos*/
+@media only screen and (min-width: 600px) {
+  /*pantallaMediana*/
+  .seccionDerechos .introduccion h1 {
+    font-size: 27px;
+  }
+  .seccionDerechos .introduccion h2 {
+    font-size: 25px;
+  }
+  .seccionDerechos .textoDerechos {
+    font-size: 14px;
+  }
+
+  .row .col-sm-6 .card .card-body .card-title {
+    font-size: 18px;
+  }
+  .row .col-sm-6 .card .card-body .card-text {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .seccionDerechos .introduccion h1 {
+    font-size: 31px;
+  }
+  .seccionDerechos .introduccion h2 {
+    font-size: 27px;
+  }
+  .seccionDerechos .textoDerechos {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .row .col-sm-6 {
+    width: 250px;
+  }
+  .row .col-sm-6 .card .card-body {
+    width: 250px;
+  }
+  .row .col-sm-6 .card .card-body .card-title {
+    font-size: 18px;
+  }
+  .row .col-sm-6 .card .card-body .card-text {
+    font-size: 14px;
+  }
+
+  .center .textoDerechos {
+    padding-left: 16rem;
+  }
+}
+/*finMediaQueryDerechos*/
+/*finEstilosDerechos*//*# sourceMappingURL=main.css.map */
