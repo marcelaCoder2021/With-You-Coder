@@ -343,7 +343,7 @@ footer { /*footerUnico*/
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 10px 10%;
+        padding: 10px 15%;
         .textoPrimerosPasos{
         @extend %estiloTextos;
         margin:0;
@@ -361,7 +361,7 @@ footer { /*footerUnico*/
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px  10%;
+    padding: 10px  15%;
     .introduccion{
         h2{
             @extend %h2mobile;
@@ -421,6 +421,7 @@ footer { /*footerUnico*/
         .divPrimerosPasos{ 
             .textoPrimerosPasos{
            font-size: 16px;
+           line-height: 20px;
             li{
                 padding: 10px;
                 }
@@ -428,10 +429,11 @@ footer { /*footerUnico*/
         }
     }
     .seccionPrimerosPasos2{
-        padding:10px 10%;
+        padding:10px 15%;
         .center{
             .textoPrimerosPasos{
                 font-size: 16px;
+                line-height: 20px;
                 li{
                     padding-bottom: 12px;
                 }
@@ -591,18 +593,202 @@ footer { /*footerUnico*/
             }   
         } 
     }
-.center{
-    .textoDerechos{
-        padding-left: 16rem;
-    }
-}
-
-
-
-
-
-
-
+    .center{
+        .textoDerechos{
+            padding-left: 16rem;
+        }
+    }   
 }
 /*finMediaQueryDerechos*/
 /*finEstilosDerechos*/
+
+/*estilosDuelo*/
+.seccionDuelo{
+    background: $background;
+    padding: 10px 10%;
+    .introduccion{ 
+        h1{
+            padding: 16px;
+            font-family: $FontH1;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 44px;
+            text-align: center;
+            color: $FontH1Color;
+        }
+        h2{ 
+        @extend %h2mobile;   
+        }
+    }
+    .main{
+        .texto{
+            @extend %estiloTextos;
+            margin:0;
+        }
+    }
+    .row.row-cols-1.row-cols-md-2.g-4{
+            display: flex;
+            
+            .col{
+                width: 240px;
+                .cardDuelo{
+                    .card-body{
+                        a{
+                            text-decoration: none;
+                            h5{
+                                font-size: 16px;
+                                text-align: center;
+                                color: $FontColor;                       
+                     }
+                }
+                        p{
+                            font-size: 12px;
+                            color: $FontColor;
+                            text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+/*mediaQueryDuelo*/
+@media only screen and (min-width:600px){ /*pantallaMediana*/
+    .seccionDuelo{
+        padding: 10px 15%;
+        .introduccion{
+            h1{
+                font-size: 27px;
+            }
+        }
+        .main{
+            .texto{
+                font-size: 14px;
+            }
+        }
+        .row.row-cols-1.row-cols-md-2.g-4{
+            .col{
+                width: 340px;
+                .cardDuelo{
+                    .card-body{
+                        a{
+                            h5{
+                                font-size: 16px;
+                            }
+                        }
+                        p{
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width:992px)/*pantallaGrande*/{
+    .seccionDuelo{
+        padding: 15px 15%;
+        .introduccion{
+            h1{
+                font-size: 31px;
+            }
+        }
+        .main{
+            .texto{
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+        .row.row-cols-1.row-cols-md-2.g-4{
+            .col{
+                width: 340px;
+                .cardDuelo{
+                    .card-body{
+                        a{
+                            h5{
+                                font-size: 18px;
+                            }
+                        }
+                        p{
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*finMediaQueryDuelo*/
+/*finEstilosDuelo*/
+
+/*estilosArticulos*/
+.seccionArticulos{
+    background: $background;
+    padding: 10px  10%;
+    h1{
+        font-family: $FontH1;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px;
+        text-align: center;
+        color: $FontH1Color;
+        padding-bottom: 12px;
+    }
+    h2{
+        @extend %h2mobile;
+        padding: 0;
+        line-height: 30px;      
+    }
+        .center{
+            color:$FontColor;
+            @extend %estiloTextos;
+            margin: 5% 0;
+        }
+        p{
+            @extend %estiloTextos;
+            margin-right: 0;
+            margin-left: 0;
+            .texto{
+                @extend %estiloTextos;
+                margin-right: 0;
+                margin-left: 0;
+
+            }
+        }
+    }      
+
+/*mediaQueryArticulos*/
+@media only screen and (min-width:600px){ /*pantallaMediana*/
+    .seccionArticulos{
+        padding: 10px  15%;
+        h1{
+            font-size: 27px;
+        }
+        h2{
+            font-size: 24px;
+        }
+        .center{
+            font-size: 14px;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+}
+@media only screen and (min-width:992px)/*pantallaGrande*/{
+    .seccionArticulos{
+        h1{
+        font-size: 31;
+        }
+        h2{
+            font-size: 27;
+        }
+        .center{
+            font-size: 16px;
+            }
+        p{
+            font-size: 16px;
+        }
+    }
+}
