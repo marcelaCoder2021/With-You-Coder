@@ -792,3 +792,149 @@ footer { /*footerUnico*/
         }
     }
 }
+/*finEstilosArticulos*/
+
+/*estilosContactos*/
+.contacto{
+    display: flex;
+    flex-direction: row;
+    background: $background;
+    width: 100%;
+    height: 100%;
+    .imagenContacto{
+        display: none;
+    }
+    .loginBox{
+        margin-top: 25px;
+        margin-left: 25%;
+        margin-bottom: 25px;
+        width: fit-content;
+        padding: 40px;
+        background: $CardBackground;
+        box-sizing: border-box;
+        box-shadow: 0 15px 25px rgba(0,0,0,0.6);
+        border-radius: 10px;
+        h2{
+            color:$FontH1Color;
+            font-family: $FontH1;
+            margin: 0 0 30px;
+            padding: 0;
+            text-align: center;
+        }
+        form{
+            .usuarioBox{position: relative;
+                width: 100%;
+                padding: 10px 0;
+                font-size: 12px;
+                color:$FontColor;
+                input{
+                    width: 100%;
+                    text-align: center;
+                    padding: 5px 0;
+                    font-size: 12px;
+                    background: $background;
+                    outline: none;
+                }
+                textarea{
+                    width: 100%;
+                    text-align: center;
+                    background: $background;
+                }
+            }
+            p{
+                color: $FontColor;
+                .mensajeContacto{
+                    height: auto;
+                    max-height: 150px;
+                }
+            }
+            .botones{
+                display: flex;
+                flex-direction:column;
+
+                button{
+                    float: left;
+                    padding: 2px;
+                    margin:10px;
+                    font-family:'Montserrat',sans-serif;
+                    border: 2px solid #78788c;
+                    background:0;
+                    color: #5a5a6e;
+                    cursor: pointer;
+                    border-radius: 10px;
+                    a{
+                        font-size: 12px;
+                        text-decoration: none;
+                        color:$FontColor;
+                    }
+                    input{
+                        font-size: 12px;
+                        text-decoration: none;
+                        color:$FontColor;
+                        background: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+/*mediaQueryContacto*/
+@media only screen and (min-width:600px){ /*pantallaMediana*/
+    .contacto{
+        justify-content: space-around;
+        .imagenContacto{
+            display:flex;
+            width: 45%;
+            padding: 20px;
+        }
+        .loginBox{
+            margin-left: 0;
+        }
+    }
+}
+@media only screen and (min-width:992px)/*pantallaGrande*/{
+    .contacto{
+        .loginBox{
+            width: 40%;
+            height: 70%;
+            margin-top: 10%;
+            margin-bottom: 10%;
+            h2{
+                font-size: 31px;
+            }
+            form{
+                .usuarioBox{
+                    font-size: 16px;
+                    input{
+                        font-size: 16px;
+                    }
+                }
+                .botones{
+                    button{
+                        a{
+                            font-size:16px;
+                        }
+                        input{
+                            font-size: 16px;
+                        }
+                    }
+                }
+
+            }
+        }
+
+
+    }
+    
+
+
+
+
+}
+
+
+
+
+
+
+
