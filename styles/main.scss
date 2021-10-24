@@ -88,12 +88,12 @@ footer { /*footerUnico*/
         padding-top: 0.7rem;
         ul {
             margin: 0;
-            padding: 0;
+            padding: 0 20px 0 0;
         }
         li{
             display: inline;
             margin: 0;
-            padding: 0 20px; 
+            padding: 0 10px; 
         }
         a{
             border-bottom: 0px solid rgba(0,0,0,0.95) ;
@@ -213,6 +213,7 @@ footer { /*footerUnico*/
     }
     .card-inner{
         font-size: 14px;
+        font-family:'roboto';
         color:$FontColor;
         height: 150px;
         display: flex;

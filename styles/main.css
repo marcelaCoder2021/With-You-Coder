@@ -107,12 +107,12 @@ footer div.social-media-links {
 }
 footer div.social-media-links ul {
   margin: 0;
-  padding: 0;
+  padding: 0 20px 0 0;
 }
 footer div.social-media-links li {
   display: inline;
   margin: 0;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 footer div.social-media-links a {
   border-bottom: 0px solid rgba(0, 0, 0, 0.95);
@@ -211,6 +211,7 @@ footer div.social-media-links p.copy {
 }
 .utiles .card-inner {
   font-size: 14px;
+  font-family: "roboto";
   color: #666464;
   height: 150px;
   display: flex;
