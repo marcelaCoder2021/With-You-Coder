@@ -189,53 +189,61 @@ footer { /*footerUnico*/
         }
     }
 }
-#area1, #area2, #area3, #area4{
-    background-color: #CBDFBD;
-    box-shadow: 0px 4px 4px rgb(0 0 0 / 10%);
-    border-radius: 16px 0px 15px;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 0;
-}
 .utiles{
     background: $background;
     h2{ 
         @extend %h2mobile;
     }
-    .ulFlex{
-        .ulHome{
-            list-style: none;
-            padding: 1.5rem;
-            text-decoration: none;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            margin-bottom: 0;
-            li{
-                p{
-                    padding: 3%;
-                    margin-bottom: 0;
-                }
-                align-self: center;
-                #area1{
-                    grid-area: 1;
-                }
-                #area2{
-                    grid-area: 2;
-                }
-                #area3{
-                    grid-area: 3;
-                }
-                #area4{
-                    grid-column: 4;
-                }
-            }  
-            grid-template-areas: "area1 area4"
-                                 "area3 area2";
-            grid-gap: 1rem;                    
-        }
+    .card-row{
+        display: flex;
+        flex-wrap: wrap; 
+        padding: 2rem;
+        background: $background;
+        justify-content: space-around;
+        align-content: space-between;
+    }
+    .card{
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        position:relative;
+        background: $CardBackground;
+        margin:5px;
+    }
+    .card-inner{
+        font-size: 14px;
+        color:$FontColor;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 1px 6px rgba(61, 65, 84, 0.15);
+        min-height: 150px;
+        padding: 1rem;
+        position: relative;
+        overflow: hidden;
+        border-radius: 0.5rem;
+        transition: 0.2s ease-in-out;
+        cursor:pointer;
+    }
+    .card-inner:before {
+        width: 0;
+        transition: 0.2s;
+        z-index: 0;
+        content: "";
+        background-color: $FontH1Color;
+        height: 4px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .card:hover .card-inner:before {
+        width: 100%;
+    }
+    .card:hover .card-inner{
+        top: -2px;
+        box-shadow: 0px 20px 40px 0px rgba(61, 65, 84, 0.15);
     }
 }
 /*mediaQueryHome*/
@@ -362,20 +370,25 @@ footer { /*footerUnico*/
     flex-direction: column;
     align-items: center;
     padding: 10px  15%;
-    .introduccion{
-        h2{
-            @extend %h2mobile;
+    .papeles{
+        display:flex;
+        flex-direction: column;
+        padding-bottom: 20px;
+        .introduccion{
+            h2{
+                @extend %h2mobile;
+            }
         }
-    }
-    .textoPrimerosPasos{
+        .textoPrimerosPasos{
         @extend %estiloTextos;
         margin:0;
-        p {
-            margin:0;
-            .consulado{
-                color: $FontColor;
-                text-decoration: none;
-                font-weight: bold;
+            p {
+                margin:0;
+                .consulado{
+                    color: $FontColor;
+                    text-decoration: none;
+                    font-weight: bold;
+                }
             }
         }
     }
@@ -398,14 +411,25 @@ footer { /*footerUnico*/
         }
     }
     .seccionPrimerosPasos2{
-        .introduccion{
-            h2{
-                font-size: 25px;
+        padding: 0 12%;
+        .papeles{
+            display:flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding-bottom: 22px;
+            .introduccion{
+                width: 160px;
             }
+            .introduccion{
+                h2{
+                    font-size: 25px;
+                }
+            }
+            .textoPrimerosPasos{
+                    font-size:14px;
+                    line-height: 18px;
+                }
         }
-        .textoPrimerosPasos{
-                font-size:14px;
-            }
     }
 }
 @media only screen and (min-width:992px)/*pantallaGrande*/{
@@ -423,19 +447,29 @@ footer { /*footerUnico*/
            font-size: 16px;
            line-height: 20px;
             li{
-                padding: 10px;
+                line-height: 10px;
                 }
             }
         }
     }
     .seccionPrimerosPasos2{
         padding:10px 15%;
-        .center{
-            .textoPrimerosPasos{
+        .papeles{
+            padding-bottom: 30px;
+            .introduccion{
+                width: 160px;
                 font-size: 16px;
-                line-height: 20px;
-                li{
-                    padding-bottom: 12px;
+                h2{
+                    font-size: 27px;
+                    }
+                }
+            .center{
+                .textoPrimerosPasos{
+                    font-size: 16px;
+                    line-height: 20px;
+                    li{
+                        line-height: 20px;
+                    }
                 }
             }
         }
@@ -740,24 +774,22 @@ footer { /*footerUnico*/
         padding: 0;
         line-height: 30px;      
     }
-        .center{
-            color:$FontColor;
-            @extend %estiloTextos;
-            margin: 5% 0;
-        }
-        p{
+    .center{
+        color:$FontColor;
+        @extend %estiloTextos;
+        margin: 5% 0;
+    }
+    p{
+        @extend %estiloTextos;
+        margin-right: 0;
+        margin-left: 0;
+        .texto{
             @extend %estiloTextos;
             margin-right: 0;
             margin-left: 0;
-            .texto{
-                @extend %estiloTextos;
-                margin-right: 0;
-                margin-left: 0;
-
-            }
         }
-    }      
-
+    }
+}      
 /*mediaQueryArticulos*/
 @media only screen and (min-width:600px){ /*pantallaMediana*/
     .seccionArticulos{
@@ -922,18 +954,9 @@ footer { /*footerUnico*/
 
             }
         }
-
-
     }
-    
-
-
-
-
 }
-
-
-
+/*finEstilosContacto*/
 
 /*estilosError404*/
 @import url(https://fonts.googleapis.com/css?family=Gilda+Display); /*importoFuente*/
@@ -1096,4 +1119,6 @@ footer { /*footerUnico*/
     box-sizing: border-box;
     text-align: center;
 }
+/*finEstilosError*/
+
 
